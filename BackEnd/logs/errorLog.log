@@ -1,0 +1,13 @@
+Unknown error. message: Cannot read properties of undefined (reading 'id').
+TB:
+TypeError: Cannot read properties of undefined (reading 'id')
+    at new MeetingModel (C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\src\models\MeetingModel.ts:13:28)
+    at C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\src\controllers\meetingController.ts:16:21
+    at Generator.next (<anonymous>)
+    at C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\src\controllers\meetingController.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\src\controllers\meetingController.ts:4:12)
+    at C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\src\controllers\meetingController.ts:15:96
+    at Layer.handleRequest (C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\yakov nizri\Desktop\Tasks\Task3_yakovNizri\BackEnd\node_modules\router\lib\route.js:117:3)
