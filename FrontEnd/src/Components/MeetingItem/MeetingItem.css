@@ -1,0 +1,16 @@
+#msgNoGroupDisplay {
+    color: grey;
+    margin: 20px;
+}
+
+#containerCardItem {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 18rem;
+    margin-bottom: 10px;
+}

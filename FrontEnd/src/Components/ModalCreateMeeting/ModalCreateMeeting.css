@@ -1,0 +1,15 @@
+.msgSubmitSeccess{
+    color:green;
+}
+
+.msgSubmitError{
+    color:red;
+}
+
+.msgSubmitWarning{
+    color:darkgoldenrod;
+}
+
+#msgSubmit{
+    margin-left:20px;
+}

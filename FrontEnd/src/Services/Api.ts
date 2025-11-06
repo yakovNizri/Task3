@@ -13,3 +13,10 @@ export async function getMeetingByGroupId(groupId: number): Promise<any[]> {
 
     return res.data;
 }
+
+export async function createMeeting({ groupId, meetingRoom, description, meetingStartDate, meetingEndDate }: any): Promise<string> {
+    const gid = Number(groupId);
+    const res = await axios.post(`${apiUrl}/createMeeting`, { groupId: gid, meetingRoom: meetingRoom, description: description, meetingStartDate: meetingStartDate, meetingEndDate: meetingEndDate });
+
+    return res.data;
+}

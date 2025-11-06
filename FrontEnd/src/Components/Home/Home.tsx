@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { getMeetingByGroupId, getTeamsDev } from '../../Services/Api';
 import MeetingItem from '../MeetingItem/MeetingItem';
 import ModalCreateMeeting from '../ModalCreateMeeting/ModalCreateMeeting';
+import "./Home.css"
 
 function Home() {
     const [selectOption, setSelectOption] = useState<any>([]);
@@ -28,17 +29,17 @@ function Home() {
     }
 
     return <>
-        <Navbar expand="lg" className="bg-body-tertiary" style={{ marginBottom: "10px" }}>
+        <Navbar expand="lg" className="bg-body-tertiary" id="navber">
             <Container>
                 <Navbar.Brand>Meetings</Navbar.Brand>
             </Container>
-            <Button variant="primary" style={{ marginRight: "15px" }} onClick={() => setModalShow(true)} >create meeting</Button>
+            <Button variant="primary" id="butCreateMeeting" onClick={() => setModalShow(true)} >create meeting</Button>
         </Navbar>
 
 
         <ModalCreateMeeting selectOption={selectOption} show={modalShow} onHide={() => setModalShow(false)} />
 
-        <Form.Select aria-label="Default select example" value={selectedId} style={{ width: "50vw", margin: "0 auto" }}
+        <Form.Select aria-label="Default select example" value={selectedId} id="selectTeam"
             onChange={(e) => handleSelect(e)}>
             <option disabled value="-1">Select a development group</option>
 
@@ -49,7 +50,7 @@ function Home() {
 
         <br />
 
-        <MeetingItem meeting={meeting} />
+        <MeetingItem meeting={meeting} selectOption={selectOption}/>
     </>
 }
 

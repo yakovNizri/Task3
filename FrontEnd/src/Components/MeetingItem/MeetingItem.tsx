@@ -1,19 +1,20 @@
 import Card from 'react-bootstrap/Card';
+import "./MeetingItem.css"
 
-function MeetingItem({ meeting }: any) {
+function MeetingItem({ meeting, selectOption }: any) {
 
     return (
         <>
             {meeting.length === 0 ? (
-                <h6 style={{ color: "grey", margin: "20px" }}>
+                <h6 id="msgNoGroupDisplay">
                     No group selected to display meetings
                 </h6>
             ) : (
-                <div style={{ display: "flex", justifyContent: "space-around",flexWrap: "wrap",gap: "30px"}}>
+                <div id="containerCardItem">
                     {meeting.map((meet: any) => (
-                        <Card key={meet.id} style={{ width: '18rem', marginBottom: '10px' }}>
+                        <Card key={meet.id} className="card">
                             <Card.Body>
-                                <Card.Title>{meet.groupId}</Card.Title>
+                                <Card.Title>{selectOption.find((s: any) => s.id === meet.groupId)?.groupName}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">
                                     {meet.meetingRoom}
                                 </Card.Subtitle>
@@ -21,8 +22,8 @@ function MeetingItem({ meeting }: any) {
                                     {meet.description}
                                 </Card.Text>
                                 <Card.Text>
-                                    Start: {meet.meetingStartDate}<br />
-                                    End: {meet.meetingEndDate}
+                                    <b>Start:</b> {meet.meetingStartDate}<br />
+                                    <b>End:</b> {meet.meetingEndDate}
                                 </Card.Text>
                             </Card.Body>
                         </Card>

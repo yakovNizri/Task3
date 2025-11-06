@@ -36,6 +36,5 @@ export async function createMeeting(meeting: MeetingModel): Promise<string> {
         await runQuery(q2, [meeting.groupId, meeting.meetingStartDate, meeting.meetingEndDate, meeting.description, meeting.meetingRoom])
         return 'The meeting was a success';
     }
-    return 'There was a collision';
-
+    return 'There was a collision in meeting';
 }
